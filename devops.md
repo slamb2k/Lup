@@ -51,7 +51,7 @@ These cmdlets were then called by Octupus Deploy to perform the release.
 
 Downloads the latest distribution of a Mobile Center build so it can uploaded to DropBox
 
-<#
+~~~~<#
 .SYNOPSIS
 This is a Powershell script to download the output of the latest release distributed on Mobile Center.
 .DESCRIPTION
@@ -99,6 +99,7 @@ if ($releaseId -eq "")
 }
 
 (New-Object System.Net.WebClient).DownloadFile($release.download_url, $DownloadFileName)
+~~~~
 
 ## Upload-DropBox
 
