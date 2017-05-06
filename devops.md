@@ -105,7 +105,7 @@ if ($releaseId -eq "")
 
 The following PowerShell cmdlet uploads thre .ipa to DropBox, shares it publicly and then returns the sharing link for addition to the .plist file.
 
-<#
+~~~~<#
 .SYNOPSIS
 This is a Powershell script to upload a file to DropBox using their REST API.
 .DESCRIPTION
@@ -147,11 +147,13 @@ $headers.Add("Content-Type", 'application/json')
 $shared = Invoke-RestMethod -Uri https://api.dropboxapi.com/2/sharing/create_shared_link -Method Post -Body $body -Headers $headers
 
 return $shared.url
+~~~~
 
 ## Create-PList
 
+Creates the .plist file which contains the required metadata for an iOS release.
 
-<#
+~~~~<#
 .SYNOPSIS
 This is a Powershell script to create a .plist file for IOS distribution.
 .DESCRIPTION
@@ -208,6 +210,7 @@ $pListXml = @”
 "@
 
 $pListXml | Out-File $PListFile -Force
+~~~~
 
 ### Reduction in Costs and Errors
 
