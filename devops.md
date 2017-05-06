@@ -1,6 +1,6 @@
 ## Problem statement ##
 
-Lüp operates with a small, multi discipline engineering team with the manual deployment pipeline being managed by one developer. After a new version is made available as a result of this release pipeline, a number of other team memebers are required to manually access each device and install the latest version. 
+Lüp operates with a small, multi discipline engineering team with the manual deployment pipeline being managed by one developer. After a new version is made available as a result of this release pipeline, a number of other team members are required to manually access each device and install the latest version. 
 
 The actual build is performed using on-premise macOS machines that need to be maintained. As the build is being performed locally there is no continuous integration and resulting feedback loop indicating the current quality of the build. In addition a local build machine does not have the same stability of an externally hosted build machine.
 
