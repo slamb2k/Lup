@@ -47,7 +47,7 @@ Three PowerShell cmdlets were written to automate the deployment pipeline:
 
 These cmdlets were then called by Octupus Deploy to perform the release.
 
-## Retrieve-VSMobileCenterBuild
+#### Retrieve-VSMobileCenterBuild ####
 
 Downloads the latest distribution of a Mobile Center build so it can uploaded to DropBox
 
@@ -101,7 +101,7 @@ if ($releaseId -eq "")
 (New-Object System.Net.WebClient).DownloadFile($release.download_url, $DownloadFileName)
 ~~~~
 
-## Upload-DropBox
+#### Upload-DropBox ####
 
 The following PowerShell cmdlet uploads thre .ipa to DropBox, shares it publicly and then returns the sharing link for addition to the .plist file.
 
@@ -149,7 +149,7 @@ $shared = Invoke-RestMethod -Uri https://api.dropboxapi.com/2/sharing/create_sha
 return $shared.url
 ~~~~
 
-## Create-PList
+#### Create-PList ####
 
 Creates the .plist file which contains the required metadata for an iOS release.
 
